@@ -1,0 +1,170 @@
+body{
+    background-color: black;
+}
+
+
+
+#parent{
+    display: flex; 
+     justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.child{
+    position: relative;
+    height: 300px;
+    width: 200px;
+    border: 2px solid red;
+    background-color: rgb(250, 248, 250);
+    border-radius: 10px;
+    margin: 20px;
+    margin-top: 30px;
+    font-size: 20px;
+    /* text-align: center; */
+    /* z-index: -1; */
+}
+
+#mini_add{
+    position: absolute;
+    font-size: x-large;
+    right: 0;
+    bottom: 0;
+    /* margin: 5px; */
+} 
+
+#trash{
+    right: 30px;
+    position: absolute;
+    font-size: x-large;
+    bottom: 0;
+}
+.box{
+    float: left;
+    margin-left: 150px;
+    width: 290px;
+    height: 70px;
+    margin-top: -70px;
+    
+}
+ .task{
+    font-size: 4em;
+    color: white;
+    font-weight: bolder;
+    
+    
+ }
+ .list{
+    font-size: 4em;
+    color: white;
+}
+
+#box2{
+    float: right;
+    margin-right: 100px;
+    margin-top: -50px;
+
+}
+
+#add_item{
+    font-size: xx-large;
+    background-color: black;
+    color: white;
+ }
+
+ #plus{
+    font-size: xx-large;
+    border-radius: 15px;
+    color: rgb(21, 21, 196);
+    
+ }
+
+#parent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+
+
+.container{
+    visibility: hidden;
+    position: absolute;
+    height: 250px;
+    width: 400px;
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    /* text-align: center; */
+    margin-left: 35%;
+    margin-top:8%;
+    z-index: 2;
+}
+
+#new_task input{
+    position: relative;
+    width: 75%;
+    height: 40px;
+     margin-right: 0px;
+    margin-left: 50px;
+    
+
+}
+
+.Add_list{
+    position: relative;
+    font-size: xx-large;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+
+}
+
+#last-container{
+    visibility: hidden;
+    position: absolute;
+    border: 2px solid black;
+    height: 250px;
+    width: 400px;
+    background-color: whitesmoke;
+    left: 35%;
+    top: 35%;
+    z-index: 2;
+}
+
+#last-add-btn{
+    width: 80px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: yellow;
+    /* text-decoration: l; */
+}
+
+
+
+#butn{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding-left: 20px;
+    /* margin-left: 110px; */
+    /* font-size: x-large; */
+    
+    
+}
+#btn{
+    
+    width: 80px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: yellow;
+    
+}
+
+#mark-done{
+    margin-right: 10px;
+    float: right;
+    
+}

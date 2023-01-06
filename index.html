@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoAppJS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+
+</head>
+<body>  
+
+
+    <div class="box"> <span class="task">Tasks</span> <span class="list">List</span> </div>
+
+    <div id="box2">
+       
+    <span id="plus" onclick="openModel()" ><i class="fa-solid fa-circle-plus" ></i></span>
+
+    <button id="add_item">Add Item</button>
+</div>
+
+
+<div id="main-container">
+<div class="container">
+    <div id="new_task"> 
+         <div class="Add_list" onclick="myfunction">Add New List</div>
+        <input type="text" id="add_model" placeholder="Add Task" >
+        <br>
+        <div id="butn">
+            <button id="btn" onclick="addTask()">Add</button>
+            <button id="btn">Close</button>
+    </div>
+</div>
+</div>
+</div>
+
+<div id="last-container">
+    <div id="new_task">
+        <div class="Add_list" >Add List</div>
+    <input type="text" id="add_model2" placeholder="Add Task">
+    <div id="butn">
+    <button id="last-add-btn" onclick="addTask2()">Add</button>
+    <button id="btn">Close</button>
+</div>
+</div> 
+</div>
+
+
+
+
+    <div id="parent"></div>
+    
+
+   
+    
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
