@@ -2,6 +2,7 @@
 
 const taskList =[];
  const miniTaskList=[];
+//  const taskhide=[];
 
 const addTask =()=>{
 
@@ -21,17 +22,25 @@ const addTask =()=>{
     model[0].style.visibility="hidden"
 
 }
+
+
 function openModel(){
 
     const model = document.getElementsByClassName("container")
-    
+    document.getElementById("main-container").style.filter="blur(8px)"
     model[0].style.visibility="visible"
     // document.getElementById("parent").style.filter="blur(8px)";
 }
 
-function addTaskonscreen(){
 
+
+const taskhide=[];
+function addTaskonscreen(){
+    let uniqueId=Date.now()
     let element = document.createElement("div");
+    element.setAttribute("id",uniqueId)
+    console.log(uniqueId)
+    taskhide.push(element)
     let heading=document.createElement("h4")
     heading.style.textAlign="center"
     let strtline=document.createElement("hr")
@@ -39,6 +48,8 @@ function addTaskonscreen(){
     unorderlist.setAttribute('id','unlist');
     let iconAdd = document.createElement("i");
     let iconDelete = document.createElement("i")
+    document.getElementById("main-container").style.filter="blur(0px)"
+
     
     element.setAttribute("class","child")
     
@@ -49,7 +60,7 @@ function addTaskonscreen(){
     iconDelete.setAttribute("id","trash")
     
     const existingElement = document.getElementById("parent")
-
+    
     existingElement.appendChild(element);
     element.appendChild(heading)
     element.appendChild(strtline)
@@ -58,6 +69,7 @@ function addTaskonscreen(){
     element.appendChild(iconAdd)
     element.appendChild(iconDelete)
     
+    heading.addEventListener('click', headclick);
     
     iconAdd.addEventListener("click",function(){
         document.getElementById("last-container").style.visibility="visible";
@@ -69,8 +81,33 @@ function addTaskonscreen(){
     })
 }
 
-function addTask2(){
+function headclick(e){
+    let requiredid=e.target.parentElement.id;
+    for(let i=0;i<taskhide.length;i++){
+        if(requiredid==taskhide[i].id){
+            continue;
+        }else{
+            taskhide[i].style.display="none"
+        }
+    }
+}
 
+
+// function taskhide(){
+//     let currentID= target.parentElement.id;
+//         heading.innerText= target.innerText;
+//         heading.style.display="none";
+//         for(let i=0;i<arrobj.length;i++){
+//             if(arrobj[i].id==currentID){
+//                 continue;
+//             }else{
+//                 arrobj[i].style.display="none";
+//             }
+//         }
+// }
+
+
+function addTask2(){
 let todotask=document.getElementById("add_model2").value;
 let tempobj2={
     id:Date.now(),
@@ -78,6 +115,7 @@ let tempobj2={
 }
 miniTaskList.push(tempobj2);
 document.getElementById("last-container").style.visibility="hidden"
+
 tolist();
 }
 function tolist(){
@@ -99,6 +137,7 @@ function tolist(){
 
 
 }
+
 
 
 

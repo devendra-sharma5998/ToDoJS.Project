@@ -96,8 +96,9 @@ body{
     border-radius: 25px;
     background-color: whitesmoke;
     /* text-align: center; */
-    margin-left: 35%;
-    margin-top:8%;
+    left: 35%;
+    top:25%;
+    /* top: ; */
     z-index: 2;
 }
 
